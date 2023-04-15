@@ -8,5 +8,10 @@
   "parserOptions": {
     "ecmaVersion": "latest"
   },
-  "rules": {}
+  "rules": {
+    "func-names": "off",
+    "no-use-before-define": "off",
+    "no-underscore-dangle": "off",
+    "no-plusplus": "off"
+  }
 }
