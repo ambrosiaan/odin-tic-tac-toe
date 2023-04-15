@@ -1,7 +1,5 @@
 body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  font-family: Arial, sans-serif;
 }
 
 .container {
@@ -13,6 +11,8 @@ body {
   border: 1px solid black;
   box-sizing: border-box;
   padding: 0px;
+  justify-content: center;
+  margin: 0 auto;
 }
 
 .cell {
@@ -25,4 +25,37 @@ body {
   align-items: center;
   font-size: 48px;
   cursor: pointer;
+}
+
+.player-inputs,
+.active-player,
+.game-controls {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.player-inputs input {
+  margin-left: 5px;
+  margin-right: 15px;
+}
+
+.game-controls button {
+  margin-right: 15px;
+}
+
+.scoreboard {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 15px;
+}
+
+.winning-message {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.hidden {
+  display: none;
 }
