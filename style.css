@@ -1,5 +1,18 @@
+:root {
+  --background-color: #aef3e7;
+  --text-color: #254e70;
+  --border-color: #254e70;
+  --button-background-color: #37718e;
+  --button-hover-color: #254e70;
+  --cell-hover-color: #8ee3ef;
+  --text-hover-color: #002d52;
+  --white-color: #f9f9f9;
+}
+
 body {
   font-family: Arial, sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
 }
 
 .container {
@@ -7,8 +20,8 @@ body {
   display: flex;
   flex-wrap: wrap;
   width: 300px;
-  height: 300px;
-  border: 1px solid black;
+  height: 306px;
+  border: 3px solid var(--border-color);
   box-sizing: border-box;
   padding: 0px;
   justify-content: center;
@@ -18,13 +31,18 @@ body {
 .cell {
   flex-basis: 33.33%;
   height: 100px;
-  border: 1px solid black;
+  border: 1px solid var(--border-color);
   box-sizing: border-box;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 48px;
+  font-weight: bold;
   cursor: pointer;
+}
+
+.cell:hover {
+  background-color: var(--cell-hover-color);
 }
 
 .player-inputs,
@@ -35,25 +53,131 @@ body {
   margin-bottom: 15px;
 }
 
+.player-inputs label,
+.active-player p {
+  font-weight: bold;
+  color: var(--text-color);
+}
+
 .player-inputs input {
   margin-left: 5px;
   margin-right: 15px;
+  padding: 5px;
+  border: 1px solid var(--border-color);
+  border-radius: 3px;
 }
 
 .game-controls button {
+  margin-top: 10px;
   margin-right: 15px;
+  background-color: var(--button-background-color);
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-weight: bold;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.game-controls button:hover {
+  background-color: var(--button-hover-color);
 }
 
 .scoreboard {
   display: flex;
   justify-content: space-around;
   margin-bottom: 15px;
+  font-weight: bold;
+  color: var(--text-color);
 }
 
 .winning-message {
   display: flex;
   justify-content: center;
   margin-top: 20px;
+  font-weight: bold;
+  color: var(--text-color);
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--background-color);
+  padding: 20px;
+  border-radius: 5px;
+  width: 80%;
+  max-width: 500px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.modal-content h2 {
+  align-self: center;
+}
+
+.player-inputs label {
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--text-color);
+  display: block;
+}
+
+.player-inputs input[type="text"] {
+  font-size: 16px;
+  padding-left: 0px;
+  padding: 5px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid var(--border-color);
+  background-color: var(--white-color);
+  color: var(--text-color);
+}
+
+#submitNames {
+  background-color: var(--button-background-color);
+  color: var(--white-color);
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  align-self: center;
+}
+
+#submitNames:hover,
+#submitNames:focus {
+  background-color: var(--button-hover-color);
+  cursor: pointer;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--text-color);
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: var(--text-hover-color);
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .hidden {
