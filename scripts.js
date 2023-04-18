@@ -48,9 +48,6 @@ const gameboard = (function () {
       } else {
         activePlayer.addPoint();
         displayController.endRoundMessage(`${winner.getName()} is the winner!`);
-        console.log(
-          `Player1: ${players[0].getPlayerScore()}, Player2: ${players[1].getPlayerScore()}`
-        );
         displayController.updateScoreboard(
           players[0].getPlayerScore(),
           players[1].getPlayerScore()
