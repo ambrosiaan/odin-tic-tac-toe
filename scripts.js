@@ -161,7 +161,7 @@ const displayController = (function () {
   }
 
   function updateActivePlayer(activePlayer) {
-    currentPlayerDisplay.innerText = `${activePlayer.getName()} (${activePlayer.getSign()} )`;
+    currentPlayerDisplay.innerText = `${activePlayer.getName()} (${activePlayer.getSign()})`;
   }
 
   function endRoundMessage(text) {
