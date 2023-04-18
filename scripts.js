@@ -119,6 +119,8 @@ const displayController = (function () {
   const player1Score = document.getElementById("player1Score");
   const player2Score = document.getElementById("player2Score");
 
+  inputModal.classList.remove("hidden");
+
   closeButton.addEventListener("click", () => {
     inputModal.classList.add("hidden");
   });
@@ -182,6 +184,7 @@ const displayController = (function () {
     updateScoreboard,
   };
 })();
+
 gameboard.newGame("Player1", "Player2");
 
 displayController.renderGameBoard();
